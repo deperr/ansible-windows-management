@@ -9,7 +9,7 @@
   tasks:
     - name: Copy PowerShell script to remote
       ansible.windows.win_copy:
-        src: "{{ playbook_dir }}/files/query_services.ps1"
+        src: "../files/query_services.ps1"
         dest: "{{ remote_dest }}"
 
     - name: Run remote script
