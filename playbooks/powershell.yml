@@ -8,10 +8,10 @@
 
   tasks:
     - name: Run PowerShell
+      register: ps_output
       ansible.windows.win_powershell:
         script: |
-          {{ ps_script }}
-      register: ps_output
+          {{ ps_script | regex_replace('^"|"$', '') }}
 
     - name: Print output
       ansible.builtin.debug:
