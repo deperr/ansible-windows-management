@@ -12,11 +12,11 @@
         src: "{{ playbook_dir }}/files/query_services.ps1"
         dest: "{{ remote_dest }}"
 
-    - name: Run Script
+    - name: Run remote script
       register: ps_output
       ansible.windows.win_powershell:
-        script: |
-          {{ remote_dest }} -ServiceState {{ service_state }}
+        path: "{{ remote_dest }} -ServiceState {{ service_state }}"
+        remote_src: true
 
     - name: Print output
       ansible.builtin.debug:
