@@ -15,8 +15,10 @@
     - name: Run remote script
       register: ps_output
       ansible.windows.win_powershell:
-        path: "{{ remote_dest }} -ServiceState {{ service_state }}"
+        path: "{{ remote_dest }}"
         remote_src: true
+        parameters:
+          ServiceState: "{{ service_state }}"
 
     - name: Print output
       ansible.builtin.debug:
