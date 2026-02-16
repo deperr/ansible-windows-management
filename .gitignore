@@ -7,12 +7,8 @@ collections/*
 collections/ansible_collections/*
 !collections/ansible_collections/dperrone
 collections/ansible_collections/dperrone/*
-!collections/ansible_collections/dperrone/apps
-# https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+!collections/ansible_collections/dperrone/windows
+
 
 
 # Distribution / packaging
@@ -35,24 +31,6 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-cover/
 
 # pyenv
 #   For a library or package, you might want to ignore these files since the code is
